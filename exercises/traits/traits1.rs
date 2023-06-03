@@ -16,7 +16,11 @@ trait AppendBar {
 }
 
 impl AppendBar for String {
-    // TODO: Implement `AppendBar` for type `String`.
+  fn append_bar(self) -> String {
+    format!("{}{}", self, "Bar")
+}
+// could also have used: 
+// fn append_bar(self) -> Self { self + "Bar" }
 }
 
 fn main() {
