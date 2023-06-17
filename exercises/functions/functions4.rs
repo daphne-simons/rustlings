@@ -6,6 +6,7 @@
 // (Don't worry about the function bodies themselves, we're only interested
 // in the signatures for now. If anything, this is a good way to peek ahead
 // to future exercises!)
+
 fn main() {
     let original_price = 51;
     println!("Your sale price is {}", sale_price(original_price));

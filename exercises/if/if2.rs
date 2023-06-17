@@ -6,7 +6,6 @@
 
 
 pub fn foo_if_fizz(fizzish: &str) -> &str {
- 
       match fizzish {
         "fizz" => "foo", 
         "fuzz" => "bar",
