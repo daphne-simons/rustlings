@@ -26,19 +26,11 @@ impl Package {
         }
     }
 
-    fn is_international(&self) -> Package {
-        if recipient_country == sender_country {
-          panic!("Package is not international.")
-        } else {
-          Package {
-            sender_country,
-            recipient_country,
-            weight_in_grams,
-          }
-        }
+    fn is_international(&self) -> bool {
+        self.recipient_country != self.sender_country
     }
 
-    fn get_fees(&self, cents_per_gram: i32) -> u32 {
+    fn get_fees(&self, cents_per_gram: i32) -> i32 {
         cents_per_gram * self.weight_in_grams
     }
 }
